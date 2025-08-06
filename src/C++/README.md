@@ -1,6 +1,6 @@
 # URDULIZ SEATING PROBLEM (USP) 🪑
 
-Esta carpeta incluye el código base para la implementación de la solución al USP en **C++**. Todas las funcionalidades básicas necesarias están incluidas en la clase USP definida en los ficheros *utils.hpp* y *utils.cpp*. **NO ES NECESARIO MODIFICAR DICHOS FICHEROS**, podéis implementar vuestra solución directamente en el fichero *main.cpp*, tal como se os indica. Para ello, hay varias funciones de la clase USP que necesitaréis utilizar:
+Esta carpeta incluye el código base para la implementación de vuestras soluciones en **C++**. Todas las funcionalidades básicas necesarias están incluidas en la clase USP definida en los ficheros *utils.hpp* y *utils.cpp*. **NO ES NECESARIO MODIFICAR DICHOS FICHEROS**, podéis implementar vuestra solución directamente en el fichero *main.cpp*, tal como se os indica. Para ello, hay varias funciones de la clase USP que necesitaréis utilizar:
 
  - **get_dimensions(int *n_clusters, int *n_rows, int *n_seats)**: Función que guarda en las variables *n_clusters*, *n_rows* y *n_seats* la cantidad de clusters, filas y asientos en el problema, respectivamente.
 
