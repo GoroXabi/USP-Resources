@@ -15,7 +15,7 @@ Varys lo hubiese hecho en lo que tarda en subir el ascensor, pero está en unas 
 
 ## Objetivo 🎯
 
-Nuestro objetivo es sentar a **TODOS** los estudiantes de *Urduliz 42* en los asientos disponibles a la vez que maximizamos la cantidad de **PUNTOS** 🌠 obtenidos por cumplir las preferencias de los estudiantes. Existen dos tipos de preferencias: *posicionales* y *relacionales*. Cada estudiante podrá aportar un máximo de **9 PUNTOS** 🌠 en caso de que todas sus preferencias se vean satisfechas.
+Nuestro objetivo es sentar a los *192* estudiantes de *Urduliz 42* en las localizaciones disponibles (**4 clusters** de **8 filas** y **6 asientos** por fila) a la vez que maximizamos la cantidad de **PUNTOS** 🌠 obtenidos por cumplir las preferencias de los estudiantes. Existen dos tipos de preferencias: *posicionales* y *relacionales*. Cada estudiante podrá aportar un máximo de **9 PUNTOS** 🌠 en caso de que todas sus preferencias se vean satisfechas.
 
 ### Preferencias posicionales
 
