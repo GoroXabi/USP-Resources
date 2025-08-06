@@ -1,6 +1,6 @@
 # URDULIZ SEATING PROBLEM (USP) 🪑
 
-Esta carpeta incluye el código base para la implementación de la solución al **USP** en Python. Todas las funcionalidades básicas necesarias están incluidas en la clase USP definida en el fichero *utils.py*. **NO ES NECESARIO MODIFICAR DICHO FICHERO**, podéis implementar vuestra solución directamente en el fichero *optimizer.py*, tal como se os indica. Para ello, hay varias funciones de la clase USP que necesitaréis utilizar:
+Esta carpeta incluye el código base para la implementación de vuestras soluciones en Python. Todas las funcionalidades básicas necesarias están incluidas en la clase USP definida en el fichero *utils.py*. **NO ES NECESARIO MODIFICAR DICHO FICHERO**, podéis implementar vuestra solución directamente en el fichero *optimizer.py*, tal como se os indica. Para ello, hay varias funciones de la clase USP que necesitaréis utilizar:
 
  - **get_dimensions():** Función que devuelve la cantidad de clusters, filas y asientos en el problema.
 
