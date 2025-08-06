@@ -82,6 +82,39 @@ USP::USP(int n_c, int n_r, int n_s, std::string instance_path)
         }
     }
 
+
+//Función que devuelve la cantidad de clusters, filas y asientos en el problema
+void    USP::get_dimensions(int *n_clusters, int *n_rows, int *n_seats){
+    *n_clusters = this->n_clusters;
+    *n_rows = this->n_rows;
+    *n_seats = this->n_seats;
+}
+
+//Función que devuelve la cantidad de estudiantes en el problema
+int    USP::get_size(){
+    return(this->n_students);
+}
+
+//Función que devuelve el cluster, fila y asiento deseado (positivo) / no deseado (negativo) por el estudiante con el ID indicado
+int     USP::get_seat_preference(int id, int *pref_cluster, int *pref_row, int *pref_seat){
+    if(this->instance.find(id) == this->instance.end()){
+        std::cerr << "El estudiante indicado no existe." << std::endl;
+        return 1;
+    }
+    this->instance[id].get_seat_preference(pref_cluster,pref_row,pref_seat);
+    return(0);
+}
+
+//Función que devuelve los IDs de los estudiantes que quiere tener cerca (positivo) / lejos (negativo) el estudiante con el ID indicado
+int     USP::get_student_preference(int id, int *other_id_1, int *other_id_2){
+    if(this->instance.find(id) == this->instance.end()){
+        std::cerr << "El estudiante indicado no existe." << std::endl;
+        return 1;
+    }
+    this->instance[id].get_student_preference(other_id_1,other_id_2);
+    return(0);
+}
+
 //Función que "sienta" a un estudiante en la localización (cluster,fila,asiento)
 int    USP::sit_down(int id, int cluster, int row, int seat){
     if(this->solution.find(id) == this->solution.end()){
@@ -103,28 +136,6 @@ int    USP::get_seat(int id, int *cluster, int *row, int *seat){
     return(0);
 }
 
-//Función que devuelve la solución actual
-std::map<int,Location>    USP::get_solution(){
-    return(this->solution);
-}
-
-//Función que devuelve la instancia del problema
-std::map<int,Student>   USP::get_instance(){
-    return(this->instance);
-}
-
-//Función que devuelve la cantidad de clusters, filas y asientos en el problema
-void    USP::get_dimensions(int *n_clusters, int *n_rows, int *n_seats){
-    *n_clusters = this->n_clusters;
-    *n_rows = this->n_rows;
-    *n_seats = this->n_seats;
-}
-
-//Función que devuelve la cantidad de estudiantes en el problema
-int    USP::get_size(){
-    return(this->n_students);
-}
-
 //Función que evalua la solución actual
 int   USP::evaluate()
 {
@@ -142,7 +153,7 @@ int   USP::evaluate()
         this->instance[key].get_seat_preference(&pref_c,&pref_r,&pref_s);
         value.get_seat(&final_c,&final_r,&final_s);
 
-        //Validación de las localizaciones
+        //Validar que la localización exista
         if((final_c) < 1 || (final_c) > (this->n_clusters) || (final_r) < 1 || (final_r) > (this->n_rows) || (final_s) < 1 || (final_s) > (this->n_seats)){
             std::cerr << "Localización no válida para el estudiante " << key << "." << std::endl;
             return -1;
@@ -201,7 +212,7 @@ int    USP::print_solution(std::string solution_path){
     std::ofstream file(solution_path);
 
     if (!file) {
-        std::cerr << "No se pudo abrir el archivo indicado." << std::endl;
+        std::cerr << "No se pudo escribir la solución." << std::endl;
         return 1;
     }
 

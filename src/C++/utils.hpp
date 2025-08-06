@@ -63,12 +63,12 @@ private:
 
 public:
     USP(int n_c, int n_r, int n_s, std::string instance_path);
-    int                        sit_down(int id, int cluster, int row, int seat);
-    int                        get_seat(int id, int *cluster, int *row, int *seat);
     void                        get_dimensions(int *n_clusters, int *n_rows, int *n_seats);
     int                         get_size();
-    std::map<int,Location>      get_solution();
-    std::map<int,Student>       get_instance();
+    int                        get_seat_preference(int id, int *pref_cluster, int *pref_row, int *pref_seat);
+    int                        get_student_preference(int id, int *other_id_1, int *other_id_2);
+    int                        sit_down(int id, int cluster, int row, int seat);
+    int                        get_seat(int id, int *cluster, int *row, int *seat);
     int                         evaluate();
     int                         print_solution(std::string solution_path);
 
