@@ -1,5 +1,7 @@
 # USP CÓDIGO BASE - VERSION PYTHON 🐍
 
+> 📝 **Requisitos:** Es necesario disponer de la librería *pandas* (>=2.2.3).
+
 Esta carpeta incluye el código base para la implementación de vuestras soluciones en Python. Todas las funcionalidades básicas necesarias están incluidas en la clase USP definida en el fichero *utils.py*. **NO ES NECESARIO MODIFICAR DICHO FICHERO**, podéis implementar vuestra solución directamente en el fichero *optimizer.py*, tal como se os indica. Para ello, hay varias funciones de la clase USP que necesitaréis utilizar:
 
  - **get_dimensions():** Función que devuelve la cantidad de clusters, filas y asientos en el problema.
@@ -20,6 +22,4 @@ Esta carpeta incluye el código base para la implementación de vuestras solucio
 
 El fichero *main.py* incluye una función de ejemplo que genera una solución aleatoria al problema para que podáis observar el funcionamiento básico de la interfaz proporcionada.
 
-## Requisitos 📝
-
-Es necesario disponer de la librería *pandas* (>=2.2.3) para la lectura y escritura de los ficheros csv.
+> ⚠️ **Warning:** El rango de IDs de estudiante válidos es **1-192**. Los rangos de clusters, filas y asientos válidos son **1-4**, **1-8** y **1-6**, respectivamente. Valores fuera de estos rangos darán error, ya que se estaría accediendo a estudiantes/localizaciones que no existen.
