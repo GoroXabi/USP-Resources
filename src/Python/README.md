@@ -6,11 +6,11 @@ Esta carpeta incluye el código base para la implementación de vuestras solucio
 
  - **get_size():** Función que devuelve la cantidad de estudiantes (y, por lo tanto, localizaciones) en el problema.
 
-  - **get_seat_preference(int id)**: Función que devuelve las preferencias de cluster, fila y asiento del estudiante con el ID indicado. Un valor positivo implica que el estudiante quiere estar en ese cluster/fila/asiento, mientras que un valor negativo indica que no quiere estar en ese cluster/fila/asiento.
+  - **get_seat_preference(int id)**: Función que devuelve las preferencias de cluster, fila y asiento del estudiante con el ID indicado. Un valor positivo implica que le estudiante quiere estar en ese cluster/fila/asiento, mientras que un valor negativo indica que no quiere estar en ese cluster/fila/asiento.
 
-  - **get_student_preference(int id)**: Función que devuelve los IDs de los estudiantes con respecto a los cuales tiene una preferencia relacional el estudiante con el ID indicado. Un valor positivo implica una preferencia de cercanía, mientras que un valor negativo indica una preferencia de lejanía.
+  - **get_student_preference(int id)**: Función que devuelve los IDs de les estudiantes con respecto a los cuales tiene una preferencia relacional le estudiante con el ID indicado. Un valor positivo implica una preferencia de cercanía, mientras que un valor negativo indica una preferencia de lejanía.
 
- - **get_seat(student_id):** Función que devuelve la localización del estudiante con el ID indicado. En caso de que el estudiante aún no tenga ninguna localización asignada, devolverá (0,0,0).
+ - **get_seat(student_id):** Función que devuelve la localización del estudiante con el ID indicado. En caso de que le estudiante aún no tenga ninguna localización asignada, devolverá (0,0,0).
 
  - **sit_down(student_id,cluster,row,seat):** Función que sienta al estudiante con el ID indicado en la localización definida por las variables cluster, row y seat.
 
