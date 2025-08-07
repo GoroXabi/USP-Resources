@@ -122,6 +122,7 @@ int    USP::sit_down(int id, int cluster, int row, int seat){
         return 1;
     }
     this->solution[id].sit_down(cluster,row,seat);
+    this->seats["c"+std::to_string(cluster)+"r"+std::to_string(row)+"s"+std::to_string(seat)] = id;
     return(0);
 }
 
@@ -133,6 +134,13 @@ int    USP::get_seat(int id, int *cluster, int *row, int *seat){
         return 1;
     }
     this->solution[id].get_seat(cluster,row,seat);
+    return(0);
+}
+
+int     USP::get_student_in_seat(int cluster, int row, int seat){
+    if(this->seats.find("c"+std::to_string(cluster)+"r"+std::to_string(row)+"s"+std::to_string(seat)) != this->seats.end()){
+        return(this->seats["c"+std::to_string(cluster)+"r"+std::to_string(row)+"s"+std::to_string(seat)]);
+    }
     return(0);
 }
 

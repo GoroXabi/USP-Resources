@@ -46,6 +46,7 @@ class USP():
 
         #Inicializamos una solución vacía
         self.__solution = {id:(0,0,0) for id in self.__instance.keys()}
+        self.__seats = {}
     
     #Función que devuelve la cantidad de clusters, filas y asientos en el problema
     def get_dimensions(self):
@@ -74,6 +75,7 @@ class USP():
         if(not (1 <= cluster <= N_CLUSTERS and 1 <= row <= N_ROWS and 1 <= seat <= N_SEATS)):
             raise ValueError("La localización indicada no existe.")
         self.__solution[student_id] = (cluster,row,seat)
+        self.__seats[(cluster,row,seat)] = student_id
 
     #Función que devuelve el cluster, fila y asiento donde se encuentra el estudiante con el ID indicado
     #En caso de que aún no se haya sentado al estudiante, devuelve (0,0,0)
@@ -81,6 +83,12 @@ class USP():
         if(student_id not in self.__solution.keys()):
             raise ValueError("El estudiante indicado no existe.")
         return self.__solution[student_id]
+
+    #Función que devuelve el ID del estiudiante que está en la localización (cluster,fila,asiento). Si no hay ninguno, devuelve 0
+    def get_student_in_seat(self,cluster,row,seat):
+        if ((cluster,row,seat) in self.__seats):
+            return(self.__seats[(cluster,row,seat)])
+        return(0)
     
     #Función que evalua la solución actual
     def evaluate(self):
