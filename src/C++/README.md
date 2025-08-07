@@ -21,4 +21,4 @@ Esta carpeta incluye el código base para la implementación de vuestras solucio
 El fichero *main.cpp* incluye una función de ejemplo que genera una solución aleatoria al problema para que podáis observar el funcionamiento básico de la interfaz proporcionada.
 
 
-> ⚠️ **Warning:** El rango de IDs de estudiante válidos es 1-192. Los rangos de clusters, filas y asientos válidos son 1-4, 1-8 y 1-6, respectivamente. Valores fuera de estos rangos devolverán error, ya que se estaría accediendo a estudiantes/localizaciones que no existen.
+> ⚠️ **Warning:** El rango de IDs de estudiante válidos es **1-192**. Los rangos de clusters, filas y asientos válidos son **1-4**, **1-8** y **1-6**, respectivamente. Valores fuera de estos rangos darán error, ya que se estaría accediendo a estudiantes/localizaciones que no existen.
