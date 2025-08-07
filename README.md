@@ -1,6 +1,8 @@
 # URDULIZ SEATING PROBLEM (USP) 🪑
 > Juez Online http://10.64.240.227:8501
 
+> Presentación https://docs.google.com/presentation/d/1wMWg6M4EkwlT84e26uupS2mDhv7aohD1OKtWVZLupyY/edit?usp=sharing
+
 Repositorio desarrollado para el reto Urduliz Seating Problem (USP).
 
 ## Contenido 📁
